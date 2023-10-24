@@ -1,0 +1,27 @@
+/* In CSS, styling must be applied to the appropriate element - otherwise, it's just junk!
+
+For this challenge, fix up the selectors in the provided code so that the following all works:
+
+* Every second child of the "nav" element must have a grey background colour.
+* Any span element inside a span element inside a span element must have a red background.
+* The last paragraph tag in the HTML file must have 20% padding at its top.
+*/
+
+body
+{
+    margin: 0;
+}
+
+nav a:nth-child(even)
+{
+    background: grey;
+}
+
+span span span
+{
+    background-color: red;
+}
+body p:last-of-type
+{
+    padding-top: 20%;
+}
