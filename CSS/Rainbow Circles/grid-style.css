@@ -1,0 +1,57 @@
+/* Circles are just round squares */
+
+/* Lesson Challenge:
+
+Rainbow Circles
+While only modifying the CSS and not modifying the HTML create six concentric circles, each of width 50 pixels.
+
+The colours for the circles should be:
+rebeccapurple
+royalblue
+green
+yellow
+orange
+red
+
+*/
+
+/* V2 of this challenge is using CSS grid and not absolute/relative positioning */
+/* much easier lol */
+
+
+:root {
+    --border-width: 50px;
+    --grid-width: 100px;
+}
+body {
+    display: grid;
+    grid-template-columns: repeat(6, var(--grid-width));
+    grid-template-rows: repeat(6, var(--grid-width));
+}
+
+#one {
+    border: var(--border-width) solid red;
+    border-radius: 50%;
+    background-color: orange;
+
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+
+.two {
+    border: var(--border-width) solid yellow;
+    border-radius: 50%;
+    background-color: green;
+
+    grid-row: 2 / -2;
+    grid-column: 2 / -2;
+}
+
+.three {
+    border: var(--border-width) solid royalblue;
+    border-radius: 50%;
+    background-color: rebeccapurple;
+
+    grid-row: 3 / -3;
+    grid-column: 3 / -3;
+}
